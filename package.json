@@ -1,0 +1,28 @@
+{
+  "name": "thin_chat",
+  "version": "1.0.0",
+  "description": "Thin Chat client made in JS to test socket functionality",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "node client.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rguzg/thin_chat.git"
+  },
+  "keywords": [
+    "thin",
+    "chat",
+    "socket"
+  ],
+  "author": "rguzgu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rguzg/thin_chat/issues"
+  },
+  "homepage": "https://github.com/rguzg/thin_chat#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
