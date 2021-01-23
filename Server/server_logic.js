@@ -8,10 +8,10 @@
     For more information about the specific structure of the messages check the readme.md file
 */
 
-const GenerateResponse = (client_socket) => {
+const GenerateResponse = (buffer) => {
     console.log(`Message contents: ${buffer.toString()}`);
 
-    client_socket.end(`Message received: ${buffer.toString()}`);
+   return `Message received: ${buffer.toString()}`;
 };
 
 module.exports = GenerateResponse;
