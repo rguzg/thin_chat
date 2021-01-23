@@ -1,17 +1,15 @@
 const dotenv = require("dotenv");
 const net = require("net");
+const GenerateResponse = require("./server_logic");
 
 dotenv.config();
 
 // Create new TCP server and start listening
 const chat_server = net.createServer((client_socket) => {
     console.log(`Recieved message from ${client_socket.remoteAddress}`);
-    client_socket.on('data', (buffer) => {
-        console.log(`Message contents: ${buffer.toString()}`);
+    client_socket.on('data', () => {
         // The response depends on the message in the socket
-        console.log("processing message... (kappa)");
-
-        client_socket.end("{status: 200}");
+        GenerateResponse(client_socket);
     })
     
     client_socket.on("end", (hadError) => {
