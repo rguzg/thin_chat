@@ -11,7 +11,7 @@
 const GenerateResponse = (buffer) => {
     console.log(`Message contents: ${buffer.toString()}`);
 
-   return `Message received: ${buffer.toString()}`;
+   return buffer.toString();
 };
 
 module.exports = GenerateResponse;
