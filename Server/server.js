@@ -7,9 +7,11 @@ dotenv.config();
 // Create new TCP server and start listening
 const chat_server = net.createServer((client_socket) => {
     console.log(`Recieved message from ${client_socket.remoteAddress}`);
-    client_socket.on('data', () => {
+    client_socket.on('data', (buffer) => {
         // The response depends on the message in the socket
-        GenerateResponse(client_socket);
+        let response = GenerateResponse(buffer);
+
+        client_socket.write(response);
     })
     
     client_socket.on("end", (hadError) => {
