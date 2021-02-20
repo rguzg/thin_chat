@@ -4,7 +4,7 @@ pipeline {
     stage('Hello World') {
       steps {
         echo 'Hello World'
-        sh 'ls'
+        bat 'ls'
         echo 'Baby'
         echo 'Stage 2'
       }
