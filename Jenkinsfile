@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo 'Hello World'
         sh 'ls'
+        echo 'Baby'
         echo 'Stage 2'
       }
     }
